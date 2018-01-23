@@ -9,4 +9,10 @@ describe DisappearingKittens do
       expect(subject.current_location).to eq([0, 0])
     end
   end
+
+  describe '#current_direction' do
+    it 'returns the current direction' do
+      expect(subject.current_direction).to eq('north')
+    end
+  end
 end
