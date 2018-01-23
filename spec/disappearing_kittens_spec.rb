@@ -15,4 +15,22 @@ describe DisappearingKittens do
       expect(subject.current_direction).to eq('north')
     end
   end
+
+  describe '#direction_value' do
+    it 'north is equal to [0, 1]' do
+      expect(subject.direction_value['north']).to eq([0, 1])
+    end
+
+    it 'east is equal to [1, 0]' do
+      expect(subject.direction_value['east']).to eq([1, 0])
+    end
+
+    it 'south is equal to [0, -1]' do
+      expect(subject.direction_value['south']).to eq([0, -1])
+    end
+
+    it 'west is equal to [-1, 0]' do
+      expect(subject.direction_value['west']).to eq([-1, 0])
+    end
+  end
 end
