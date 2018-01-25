@@ -1,4 +1,5 @@
 describe DisappearingKittens do
+  let(:subject) { DisappearingKittens.new('north') }
   let(:directions) do
     %w[forward right forward forward forward left forward forward left right
        forward right forward forward right forward forward left]
@@ -31,6 +32,42 @@ describe DisappearingKittens do
 
     it 'west is equal to [-1, 0]' do
       expect(subject.direction_value['west']).to eq([-1, 0])
+    end
+  end
+
+  describe '#change_rotation' do
+    let(:subject_east) { DisappearingKittens.new('east') }
+    let(:subject_south) { DisappearingKittens.new('south') }
+    let(:subject_west) { DisappearingKittens.new('west') }
+
+    it 'faces west when turning left from north' do
+      subject.change_rotation(-1)
+      expect(subject.current_direction).to eq('west')
+    end
+
+    it 'faces east when turning right from north' do
+      subject.change_rotation(1)
+      expect(subject.current_direction).to eq('east')
+    end
+
+    it 'faces north when turning left from east' do
+      subject_east.change_rotation(-1)
+      expect(subject_east.current_direction).to eq('north')
+    end
+
+    it 'faces south when turning right from east' do
+      subject_east.change_rotation(1)
+      expect(subject_east.current_direction).to eq('south')
+    end
+
+    it 'faces east when turning left from south' do
+      subject_south.change_rotation(-1)
+      expect(subject_south.current_direction).to eq('east')
+    end
+
+    it 'faces west when turning right from south' do
+      subject_south.change_rotation(1)
+      expect(subject_south.current_direction).to eq('west')
     end
   end
 end
