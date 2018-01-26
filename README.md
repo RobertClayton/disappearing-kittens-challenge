@@ -6,17 +6,17 @@ We have been tracking unusual anomalies above the rooftops that we have identifi
 
 The only information we have comes from a member of the public who claims to have witnessed one of the abductions:
 
-_"It had just turned midnight and I couldn't sleep. I headed into the kitchen to grab a midnight snack when I heard something coming from outside. I wasn't sure what it was at first, but then I started to hear what I thought was someone laughing. It sounded more sinister than that, though. It was more of a cackle."
+_"It had just turned midnight and I couldn't sleep. I headed into the kitchen to grab a midnight snack when I heard something coming from outside. I wasn't sure what it was at first, but then I started to hear what I thought was someone laughing. It sounded more sinister than that, though. It was more of a cackle."_
 
-"It took a little time for my eyes to adjust to the light as I peered outside the kitchen window. I could just make out a pointy figure wearing dark clothing. In one hand she had a long stick of some sort, in the other she was clutching onto something fluffy!"
+_"It took a little time for my eyes to adjust to the light as I peered outside the kitchen window. I could just make out a pointy figure wearing dark clothing. In one hand she had a long stick of some sort, in the other she was clutching onto something fluffy!"_
 
-"I'd seen the news stories and I immediately jumped into action. I ran outside shouting and screaming but it was too late. The mysterious woman was gone before I knew it. I don't know where to... she just seemed to vanish."_
+_"I'd seen the news stories and I immediately jumped into action. I ran outside shouting and screaming but it was too late. The mysterious woman was gone before I knew it. I don't know where to... she just seemed to vanish."_
 
 The forensics investigators arrived at the scene the next morning. They found no evidence of an abduction, but they did find a scrap of paper with some scribbled writing on it. We've had our specialists look at the piece of paper and we've concluded the following information:
 
-_"It seems that the evidence obtained from the scene of the crime is some kind of flight map. We think that the suspect uses this map to direct herself to and from her lair. We're hopeful that we can use this to locate the missing kittens."
+_"It seems that the evidence obtained from the scene of the crime is some kind of flight map. We think that the suspect uses this map to direct herself to and from her lair. We're hopeful that we can use this to locate the missing kittens."_
 
-"The woman uses a grid system to navigate. She starts facing north at coordinate (0, 0) and uses relative directions to find her way. For example, if she is heading east and turns 'right', she will be facing south. When she moves 'forward', her coordinate is updated based on the direction she is facing."_
+_"The woman uses a grid system to navigate. She starts facing north at coordinate (0, 0) and uses relative directions to find her way. For example, if she is heading east and turns 'right', she will be facing south. When she moves 'forward', her coordinate is updated based on the direction she is facing."_
 
 I hope that makes sense. We're having a hard time piecing all of the information together and we'd like you to help. Unfortunately, this information is classified and you'll have to speak to our forensics API to access it. There are details on how to do this below.
 
