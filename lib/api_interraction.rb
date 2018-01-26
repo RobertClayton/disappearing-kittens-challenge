@@ -1,3 +1,7 @@
+require "net/http"
+require "uri"
+require "json"
+
 # This class is responsible for interracting with the API
 class ApiInterraction
   def retrieve_directions
