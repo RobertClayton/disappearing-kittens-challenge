@@ -11,12 +11,9 @@ class DisappearingKittens
     @current_location = [0, 0]
     @current_direction = current_direction
     @direction_value = {
-      'north' => [0, 1],
-      'east' => [1, 0],
-      'south' => [0, -1],
-      'west' => [-1, 0]
+      'north' => [0, 1], 'east' => [1, 0], 'south' => [0, -1], 'west' => [-1, 0]
     }
-    @compass_points = ['north', 'east', 'south', 'west']
+    @compass_points = %w[north east south west]
     @rotations = @compass_points.index(current_direction)
   end
 
