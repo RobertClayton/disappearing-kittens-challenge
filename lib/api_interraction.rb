@@ -9,4 +9,9 @@ class ApiInterraction
     api_request = JSON.parse Net::HTTP.get(uri).gsub('=>', ':')
     api_request['directions']
   end
+
+  def send_location(x, y)
+    uri = URI("http://which-technical-exercise.herokuapp.com/api/:robbie.c.clayton@gmail.com/location/#{x}/#{y}")
+    Net::HTTP.get(uri)
+  end
 end

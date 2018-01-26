@@ -35,73 +35,75 @@ describe DisappearingKittens do
     end
   end
 
+  # This method is now Private 
   describe '#change_rotation' do
     let(:subject_east) { DisappearingKittens.new('east') }
     let(:subject_south) { DisappearingKittens.new('south') }
     let(:subject_west) { DisappearingKittens.new('west') }
 
-    it 'faces west when turning left from north' do
+    xit 'faces west when turning left from north' do
       subject.change_rotation(-1)
       expect(subject.current_direction).to eq('west')
     end
 
-    it 'faces east when turning right from north' do
+    xit 'faces east when turning right from north' do
       subject.change_rotation(1)
       expect(subject.current_direction).to eq('east')
     end
 
-    it 'faces north when turning left from east' do
+    xit 'faces north when turning left from east' do
       subject_east.change_rotation(-1)
       expect(subject_east.current_direction).to eq('north')
     end
 
-    it 'faces south when turning right from east' do
+    xit 'faces south when turning right from east' do
       subject_east.change_rotation(1)
       expect(subject_east.current_direction).to eq('south')
     end
 
-    it 'faces east when turning left from south' do
+    xit 'faces east when turning left from south' do
       subject_south.change_rotation(-1)
       expect(subject_south.current_direction).to eq('east')
     end
 
-    it 'faces west when turning right from south' do
+    xit 'faces west when turning right from south' do
       subject_south.change_rotation(1)
       expect(subject_south.current_direction).to eq('west')
     end
 
-    it 'faces south when turning left from west' do
+    xit 'faces south when turning left from west' do
       subject_west.change_rotation(-1)
       expect(subject_west.current_direction).to eq('south')
     end
 
-    it 'faces north when turning right from west' do
+    xit 'faces north when turning right from west' do
       subject_west.change_rotation(1)
       expect(subject_west.current_direction).to eq('north')
     end
   end
 
+  # This method is now Private
   describe '#move_forward' do
     let(:subject_east) { DisappearingKittens.new('east') }
     let(:subject_south) { DisappearingKittens.new('south') }
     let(:subject_west) { DisappearingKittens.new('west') }
 
-    it 'increments #current_location [0, 1] when #current_direction is north' do
+    xit 'increments #current_location [0, 1] when #current_direction is north' do
       subject.move_forward
       expect(subject.current_location).to eq [0, 1]
     end
 
-    it 'increments #current_location [1, 0] when #current_direction is east' do
+    xit 'increments #current_location [1, 0] when #current_direction is east' do
       subject_east.move_forward
       expect(subject_east.current_location).to eq [1, 0]
     end
 
-    it 'increments #current_location [0, -1] when #current_direction is south' do
+    xit 'increments #current_location [0, -1] when #current_direction is south' do
       subject_south.move_forward
       expect(subject_south.current_location).to eq [0, -1]
     end
 
-    it 'increments #current_location [-1, 0] when #current_direction is west' do
+    xit 'increments #current_location [-1, 0] when #current_direction is west' do
       subject_west.move_forward
       expect(subject_west.current_location).to eq [-1, 0]
     end

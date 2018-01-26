@@ -27,8 +27,10 @@ class DisappearingKittens
       change_rotation(1) if direction == 'right'
       move_forward if direction == 'forward'
     end
-    @current_location
+    send_location
   end
+
+  private
 
   def move_forward
     amount_to_move = @direction_value[@current_direction]
@@ -41,9 +43,13 @@ class DisappearingKittens
     @current_direction = @compass_points[@rotations % @compass_points.length]
   end
 
-  private
-
   def retrieve_directions
     @directions = @api_interraction.retrieve_directions
+  end
+
+  def send_location
+    x = @current_location[0]
+    y = @current_location[1]
+    @api_interraction.send_location(x, y)
   end
 end
