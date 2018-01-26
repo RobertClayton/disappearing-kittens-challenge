@@ -1,12 +1,7 @@
 describe DisappearingKittens do
-  describe 'feature: #retrieve_directions' do
-    xit 'saves the array to the instance variable #directions' do
-      subject.retrieve_directions
-      expect(subject.directions).to be_an_instance_of(Array)
-      expect(subject.directions).to eq(
-        %w[forward right forward forward forward left forward forward left right
-           forward right forward forward right forward forward left]
-      )
+  describe 'feature: #find_kittens' do
+    it 'retrieves directions from the API and finds the Kittens' do
+      expect(subject.find_kittens).to eq([5, 2])
     end
   end
 end
