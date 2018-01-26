@@ -80,4 +80,11 @@ describe DisappearingKittens do
       expect(subject_west.current_direction).to eq('north')
     end
   end
+
+  describe '#move_forward' do
+    it 'increments #current_location depending on #current_direction' do
+      subject.move_forward
+      expect(subject.current_location).to eq [0, 1]
+    end
+  end
 end
