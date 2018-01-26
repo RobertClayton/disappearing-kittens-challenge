@@ -23,9 +23,21 @@ class DisappearingKittens
   def find_kittens
     retrieve_directions
     @directions.each do |direction|
+      p '------------'
+      p direction
+      p '---'
       change_rotation(-1) if direction == 'left'
       change_rotation(1) if direction == 'right'
+      move_forward if direction == 'forward'
+      p @current_direction
+      p @current_location
     end
+  end
+
+  def move_forward
+    amount_to_move = @direction_value[@current_direction]
+    @current_location[0] = @current_location[0] + amount_to_move[0]
+    @current_location[1] = @current_location[1] + amount_to_move[1]
   end
 
   def change_rotation(incremental_amount)
@@ -33,11 +45,9 @@ class DisappearingKittens
     @current_direction = @compass_points[@rotations % @compass_points.length]
   end
 
-
   private
 
   def retrieve_directions
     @directions = @api_interraction.retrieve_directions
   end
-
 end
