@@ -82,9 +82,28 @@ describe DisappearingKittens do
   end
 
   describe '#move_forward' do
-    it 'increments #current_location depending on #current_direction' do
+    let(:subject_east) { DisappearingKittens.new('east') }
+    let(:subject_south) { DisappearingKittens.new('south') }
+    let(:subject_west) { DisappearingKittens.new('west') }
+
+    it 'increments #current_location [0, 1] when #current_direction is north' do
       subject.move_forward
       expect(subject.current_location).to eq [0, 1]
+    end
+
+    it 'increments #current_location [1, 0] when #current_direction is east' do
+      subject_east.move_forward
+      expect(subject_east.current_location).to eq [1, 0]
+    end
+
+    it 'increments #current_location [0, -1] when #current_direction is south' do
+      subject_south.move_forward
+      expect(subject_south.current_location).to eq [0, -1]
+    end
+
+    it 'increments #current_location [-1, 0] when #current_direction is west' do
+      subject_west.move_forward
+      expect(subject_west.current_location).to eq [-1, 0]
     end
   end
 end
