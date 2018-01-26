@@ -69,5 +69,15 @@ describe DisappearingKittens do
       subject_south.change_rotation(1)
       expect(subject_south.current_direction).to eq('west')
     end
+
+    it 'faces south when turning left from west' do
+      subject_west.change_rotation(-1)
+      expect(subject_west.current_direction).to eq('south')
+    end
+
+    it 'faces north when turning right from west' do
+      subject_west.change_rotation(1)
+      expect(subject_west.current_direction).to eq('north')
+    end
   end
 end
