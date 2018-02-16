@@ -19,11 +19,13 @@ class DisappearingKittens
 
   def find_kittens
     retrieve_directions
+    
     @directions.each do |direction|
       change_rotation(-1) if direction == 'left'
       change_rotation(1) if direction == 'right'
       move_forward if direction == 'forward'
     end
+
     send_location
   end
 
